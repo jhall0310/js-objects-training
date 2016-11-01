@@ -34,3 +34,19 @@
 */
 
 // YOUR CODE HERE
+var birthdayReminder =([
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    }
+  ]);
+
+  function daysUntilDate() {
+  var date = Date.parse("7/31/2017");
+  var today = Date.now("10/31/2016");
+  return ((date - today)/(1000*60*60*24));
+}

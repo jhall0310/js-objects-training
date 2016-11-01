@@ -31,3 +31,32 @@
 */
 
 // YOUR CODE HERE
+var words = {
+  fruit: 'apple',
+  veggie: 'mapple',
+  bread: 'bagel',
+
+}
+
+
+
+function letterCount(string) {
+
+  var output={};
+
+  var stringAsArray = string.split("");
+  stringAsArray.forEach(function(el) {
+
+    if (output[el]) {
+      output[el] += 1;
+    } else {
+      output[el] = 1;
+    }
+  });
+
+  return output;
+}
+
+letterCount(words.fruit);
+letterCount(words.veggie);
+letterCount(words.bread);
