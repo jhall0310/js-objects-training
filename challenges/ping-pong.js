@@ -38,3 +38,24 @@
 */
 
 // YOUR CODE HERE
+
+var table = [{steps: 0}, null, null, null];
+
+function pingPong(table) {
+
+  var objectIndex = table.findIndex(function(el) {
+    return !!el;
+  });
+  var object = table[objectIndex];
+
+  if (Math.floor(object.steps/(table.length-1)) % 2 === 0) {
+
+    table[objectIndex + 1] = object;
+  } else {
+
+    table[objectIndex - 1] = object;
+  }
+  object.steps += 1;
+  table[objectIndex] = null;
+  return table;
+}
